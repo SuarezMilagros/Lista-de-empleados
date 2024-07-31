@@ -1,0 +1,44 @@
+<div class="container mt-3">
+  <div class="card">
+      <div class="card-body">
+          <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="todos" name="sexo" class="custom-control-input" [(ngModel)]="radioButtonSeleccionado" value="Todos">
+              <label class="custom-control-label" for="todos">Todos({{ obtenerTotalEmpleado() }})</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="femenino" name="sexo" class="custom-control-input" [(ngModel)]="radioButtonSeleccionado" value="Femenino">
+              <label class="custom-control-label" for="femenino">Femenino({{ obtenerTotalFemeninos() }})</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="masculino" name="sexo" class="custom-control-input" [(ngModel)]="radioButtonSeleccionado" value="Masculino">
+              <label class="custom-control-label" for="masculino">Masculino({{ obtenerTotalMasculinos() }})</label>
+          </div>
+      </div>
+  </div>
+  <div class="card mt-3">
+      <div class="card-body">
+          <table class="table">
+              <thead>
+                <tr>
+                  <th>Legajo</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Sexo</th>
+                  <th>Salario</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let empleado of listEmpleados">
+                <tr *ngIf="radioButtonSeleccionado == 'Todos' || radioButtonSeleccionado == empleado.sexo">
+                  <td>{{ empleado.legajo }}</td>
+                  <td>{{ empleado.nombre }}</td>
+                  <td>{{ empleado.apellido }}</td>
+                  <td>{{ empleado.sexo }}</td>
+                  <td>{{ empleado.salario | currency }}</td>
+                </tr>
+              </ng-container>
+              </tbody>
+            </table>
+      </div>
+  </div>
+</div>
