@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Empleado } from '../../models/Empleado';
 import { FormsModule } from '@angular/forms';
+import { CountEmpleadoComponent } from './count-empleado/count-empleado.component';
 
 @Component({
   selector: 'app-empleado-list',
   standalone: true,
-  imports: [CommonModule, FormsModule], 
+  imports: [CommonModule, FormsModule, CountEmpleadoComponent], 
   templateUrl: './empleado-list.component.html',
   styleUrls: ['./empleado-list.component.css']  
 })

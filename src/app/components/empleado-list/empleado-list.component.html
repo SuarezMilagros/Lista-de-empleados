@@ -1,20 +1,5 @@
 <div class="container mt-3">
-  <div class="card">
-      <div class="card-body">
-          <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="todos" name="sexo" class="custom-control-input" [(ngModel)]="radioButtonSeleccionado" value="Todos">
-              <label class="custom-control-label" for="todos">Todos({{ obtenerTotalEmpleado() }})</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="femenino" name="sexo" class="custom-control-input" [(ngModel)]="radioButtonSeleccionado" value="Femenino">
-              <label class="custom-control-label" for="femenino">Femenino({{ obtenerTotalFemeninos() }})</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-              <input type="radio" id="masculino" name="sexo" class="custom-control-input" [(ngModel)]="radioButtonSeleccionado" value="Masculino">
-              <label class="custom-control-label" for="masculino">Masculino({{ obtenerTotalMasculinos() }})</label>
-          </div>
-      </div>
-  </div>
+  <app-count-empleado [todos]="obtenerTotalEmpleado()"  [masculino]="obtenerTotalMasculinos()" [femenino]="obtenerTotalFemeninos()"></app-count-empleado>
   <div class="card mt-3">
       <div class="card-body">
           <table class="table">

@@ -1,1 +1,16 @@
-<p>count-empleado works!</p>
+<div class="card">
+    <div class="card-body">
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="todos" name="sexo" class="custom-control-input" [(ngModel)]="radioButtonSeleccionado" value="Todos">
+            <label class="custom-control-label" for="todos">Todos({{todos}})</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="femenino" name="sexo" class="custom-control-input" [(ngModel)]="radioButtonSeleccionado" value="Femenino">
+            <label class="custom-control-label" for="femenino">Femenino({{femenino}})</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="masculino" name="sexo" class="custom-control-input" [(ngModel)]="radioButtonSeleccionado" value="Masculino">
+            <label class="custom-control-label" for="masculino">Masculino({{masculino}})</label>
+        </div>
+    </div>
+</div>

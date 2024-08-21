@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { EmpleadoListComponent } from './components/empleado-list/empleado-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { CountEmpleadoComponent } from './components/empleado-list/count-empleado/count-empleado.component';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    CountEmpleadoComponent
   ],
   bootstrap: [AppComponent]
 })
